@@ -1,0 +1,1370 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CCFun.Utility</name>
+    </assembly>
+    <members>
+        <member name="M:CC.Utility.Buffer.ByteDataInfo.#ctor(System.Byte[],System.Int32,System.Int32)">
+            <summary>构造函数</summary>
+            <param name="data"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:CC.Utility.Buffer.ByteDataInfo.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.Utility.Buffer.ByteDataInfo.SetData(System.Byte[],System.Int32,System.Int32)">
+            <summary>设置数据</summary>
+            <param name="data"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:CC.Utility.Buffer.ByteDataInfo.Clear">
+            <summary>清除数据</summary>
+        </member>
+        <member name="P:CC.Utility.Buffer.ByteDataInfo.Data">
+            <summary>数据</summary>
+        </member>
+        <member name="P:CC.Utility.Buffer.ByteDataInfo.Offset">
+            <summary>开始位置</summary>
+        </member>
+        <member name="P:CC.Utility.Buffer.ByteDataInfo.Count">
+            <summary>长度</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.BigEndianWriter">
+            <summary>大端模式-写</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.IEndianWriter">
+            <summary>大小端模式接口</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.IEndianWriter.GetBytes(System.Double)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IEndianWriter.GetBytes(System.Single)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IEndianWriter.GetBytes(System.Int16)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IEndianWriter.GetBytes(System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IEndianWriter.GetBytes(System.Int64)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IEndianWriter.GetBytes(System.UInt16)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IEndianWriter.GetBytes(System.UInt32)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IEndianWriter.GetBytes(System.UInt64)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.Binary.IEndianWriter.Type">
+            <summary>大小端类型</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.Finalize">
+            <summary>析构函数</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.GetBytes(System.Double)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.GetBytes(System.Single)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.GetBytes(System.Int16)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.GetBytes(System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.GetBytes(System.Int64)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.GetBytes(System.UInt16)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.GetBytes(System.UInt32)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianWriter.GetBytes(System.UInt64)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.Binary.BigEndianWriter.Instance">
+            <summary>全局实例-非线程安全</summary>
+        </member>
+        <member name="P:CC.Utility.Binary.BigEndianWriter.Type">
+            <summary>类型</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.BigEndianReader">
+            <summary>大端模式-读</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.GetDouble(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.GetSingle(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.GetInt16(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.GetInt32(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.GetInt64(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.GetUInt16(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.GetUInt32(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.BigEndianReader.GetUInt64(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.Binary.BigEndianReader.Instance">
+            <summary>全局实例,线程安全</summary>
+        </member>
+        <member name="P:CC.Utility.Binary.BigEndianReader.Type">
+            <summary>类型</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.SmallEndianWriter">
+            <summary>小端模式-写</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.Finalize">
+            <summary>析构函数</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.GetBytes(System.Double)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.GetBytes(System.Single)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.GetBytes(System.Int16)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.GetBytes(System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.GetBytes(System.Int64)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.GetBytes(System.UInt16)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.GetBytes(System.UInt32)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianWriter.GetBytes(System.UInt64)">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.Binary.SmallEndianWriter.Instance">
+            <summary>全局实例-非线程安全</summary>
+        </member>
+        <member name="P:CC.Utility.Binary.SmallEndianWriter.Type">
+            <summary>类型</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.SmallEndianReader">
+            <summary>小端-读</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.GetDouble(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.GetSingle(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.GetInt16(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.GetInt32(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.GetInt64(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.GetUInt16(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.GetUInt32(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.SmallEndianReader.GetUInt64(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.Binary.SmallEndianReader.Instance">
+            <summary>全局实例-线程安全</summary>
+        </member>
+        <member name="P:CC.Utility.Binary.SmallEndianReader.Type">
+            <summary>类型</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.EndianType">
+            <summary>大小端模式类型</summary>
+        </member>
+        <member name="F:CC.Utility.Binary.EndianType.Small">
+            <summary>默认-小端类型</summary>
+        </member>
+        <member name="F:CC.Utility.Binary.EndianType.Big">
+            <summary>大端类型</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.IBinaryAble">
+            <summary>可被二进制化的接口</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryAble.Write(CC.Utility.Binary.IBinaryWriter)">
+            <summary>写入二进制</summary>
+            <param name="bw"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryAble.Read(CC.Utility.Binary.IBinaryReader)">
+            <summary>从二进制中读取</summary>
+            <param name="br"></param>
+        </member>
+        <member name="T:CC.Utility.Binary.MyBinaryReader">
+            <summary>二进制读</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.IBinaryReader">
+            <summary>二进制读的接口</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.Close">
+            <summary>关闭</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadInt16">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadInt32">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadInt64">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadUInt16">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadUInt32">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadUInt64">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadSingle">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadDouble">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadByte">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadSByte">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.PeekByte">
+            <summary>返回下一个byte数据,游标不移动</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadBoolean">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadJavaUTF8">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadString">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadDateTime">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.ReadJavaDateTime">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.Read``1">
+            <summary></summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryReader.Read``1(``0)">
+            <summary></summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+        </member>
+        <member name="P:CC.Utility.Binary.IBinaryReader.EOF">
+            <summary>是否文件结尾</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.#ctor(System.IO.Stream)">
+            <summary>构造函数</summary>
+            <param name="input"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.#ctor(System.IO.Stream,System.Text.Encoding)">
+            <summary>构造函数</summary>
+            <param name="input"></param>
+            <param name="encoding">字符串编码</param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.#ctor(System.IO.Stream,System.Text.Encoding,CC.Utility.Binary.EndianType)">
+            <summary>构造函数</summary>
+            <param name="input"></param>
+            <param name="encoding">字符串编码</param>
+            <param name="endianType"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.Close">
+            <summary>关闭</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.Finalize">
+            <summary>析构</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.FillBuffer(System.Int32)">
+            <summary>读取数据填充缓存区</summary>
+            <param name="numBytes"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadInt16">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadInt32">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadInt64">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadUInt16">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadUInt32">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadUInt64">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadSingle">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadDouble">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadByte">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadSByte">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.PeekByte">
+            <summary>返回下一个byte数据,游标不移动</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadBoolean">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadJavaUTF8">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadString">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadDateTime">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.ReadJavaDateTime">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.Read``1">
+            <summary></summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryReader.Read``1(``0)">
+            <summary></summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+        </member>
+        <member name="P:CC.Utility.Binary.MyBinaryReader.EOF">
+            <summary>是否文件结尾</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.MyBinaryWriter">
+            <summary>二进制写</summary>
+        </member>
+        <member name="T:CC.Utility.Binary.IBinaryWriter">
+            <summary>二进制写接口</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteInt16(System.Int16)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteInt32(System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteInt64(System.Int64)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteUInt16(System.UInt16)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteUInt32(System.UInt32)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteUInt64(System.UInt64)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteSingle(System.Single)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteDouble(System.Double)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteByte(System.Byte)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteSByte(System.SByte)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteBoolean(System.Boolean)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteBytes(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteJavaUTF8(System.String)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteString(System.String)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteDateTime(System.DateTime)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.WriteJavaDateTime(System.Nullable{System.DateTime})">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.Write(CC.Utility.Binary.IBinaryAble[])">
+            <summary></summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.Write(CC.Utility.Binary.IBinaryAble)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.IBinaryWriter.Close">
+            <summary>关闭</summary>
+        </member>
+        <member name="P:CC.Utility.Binary.IBinaryWriter.Ms">
+            <summary>流</summary>
+        </member>
+        <member name="P:CC.Utility.Binary.IBinaryWriter.Position">
+            <summary>游标位置</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.#ctor(System.IO.Stream)">
+            <summary>构造函数</summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.#ctor(System.IO.Stream,System.Text.Encoding)">
+            <summary>构造函数</summary>
+            <param name="output"></param>
+            <param name="encoding">字符串编码</param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.#ctor(System.IO.Stream,System.Text.Encoding,CC.Utility.Binary.EndianType)">
+            <summary>构造函数</summary>
+            <param name="output"></param>
+            <param name="encoding">字符串编码</param>
+            <param name="endianType"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteInt16(System.Int16)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteInt32(System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteInt64(System.Int64)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteUInt16(System.UInt16)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteUInt32(System.UInt32)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteUInt64(System.UInt64)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteSingle(System.Single)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteDouble(System.Double)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteByte(System.Byte)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteSByte(System.SByte)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteBoolean(System.Boolean)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteBytes(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteJavaUTF8(System.String)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteString(System.String)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteDateTime(System.DateTime)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.WriteJavaDateTime(System.Nullable{System.DateTime})">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.Write(CC.Utility.Binary.IBinaryAble[])">
+            <summary></summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.Write(CC.Utility.Binary.IBinaryAble)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Binary.MyBinaryWriter.Close">
+            <summary>关闭</summary>
+        </member>
+        <member name="P:CC.Utility.Binary.MyBinaryWriter.Ms">
+            <summary>流</summary>
+        </member>
+        <member name="P:CC.Utility.Binary.MyBinaryWriter.Position">
+            <summary>游标位置</summary>
+        </member>
+        <member name="T:CC.Utility.CompressHelper">
+            <summary>压缩数据流</summary>
+        </member>
+        <member name="M:CC.Utility.CompressHelper.Compress_GZip(System.Byte[])">
+            <summary>压缩数据</summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:CC.Utility.CompressHelper.Decompress_GZip(System.Byte[])">
+            <summary>解压缩数据</summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:CC.Utility.MyEncoding.IdentifyEncoding">
+            <summary>
+            检测字符编码的类
+            <seealso cref="T:System.IO.Stream"/>
+            <seealso cref="T:System.Uri"/>
+            <seealso cref="T:System.IO.FileInfo"/>
+            </summary>
+            <remarks>
+            <![CDATA[
+            <strong>IdentifyEncoding</strong> 用来检测 <see cref="Uri"/>,<see cref="System.IO.FileInfo"/>,<see cref="sbyte"/> 字节数组的编码．
+            Create By lion  <br/>
+            2005-02-21 22:00  <br/>
+            Support .Net Framework v1.1.4322 <br/> 
+            WebSite：www.lionsky.net(lion-a AT sohu.com) <br/> 
+            ]]>
+            </remarks>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.#ctor">
+            <summary>
+            初始化 <see cref="T:CC.Utility.MyEncoding.IdentifyEncoding"/> 的实例
+            </summary>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.GetEncodingName(System.Uri)">
+            <summary>
+            从指定的 <see cref="T:System.Uri"/> 中判断编码类型
+            </summary>
+            <param name="testurl">要判断的 <see cref="T:System.Uri"/> </param>
+            <returns>返回编码类型("GB2312", "GBK", "HZ", "Big5", "CNS 11643", "ISO 2022CN", "UTF-8", "Unicode", "ASCII", "OTHER")</returns>
+            <example>
+            以下示例演示了如何调用 GetEncodingName方法：
+            <code>
+             IdentifyEncoding ide = new IdentifyEncoding();
+             Response.Write(ide.GetEncodingName(new Uri("http://china5.nikkeibp.co.jp/china/news/com/200307/pr_com200307170131.html")));  
+            </code>
+            </example>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.GetEncodingName(System.IO.FileInfo)">
+            <summary>
+            从指定的 <see cref="T:System.IO.FileInfo"/> 中判断编码类型
+            </summary>
+            <param name="testfile">要判断的 <see cref="T:System.IO.FileInfo"/> </param>
+            <returns>返回编码类型("GB2312", "GBK", "HZ", "Big5", "CNS 11643", "ISO 2022CN", "UTF-8", "Unicode", "ASCII", "OTHER")</returns>
+            <example>
+            以下示例演示了如何调用GetEncodingName 方法：
+            <code>
+             IdentifyEncoding ide = new IdentifyEncoding();
+             Response.Write(ide.GetEncodingName(new System.IO.FileInfo(@"C:\test.txt")));  
+            </code>
+            </example>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.GetEncodingName(System.SByte[])">
+            <summary>
+            从指定的 <see cref="T:System.SByte"/> 字节数组中判断编码类型
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.IO.FileInfo"/> </param>
+            <returns>返回编码类型("GB2312", "GBK", "HZ", "Big5", "CNS 11643", "ISO 2022CN", "UTF-8", "Unicode", "ASCII", "OTHER")</returns>
+            <example>
+            以下示例演示了如何调用 GetEncodingName 方法：
+            <code>
+             IdentifyEncoding ide = new IdentifyEncoding();
+             Response.Write(ide.GetEncodingName(IdentifyEncoding.ToSByteArray(System.Text.Encoding.GetEncoding("gb2312").GetBytes("Lion互动网络(www.lionsky.net)")))); 
+            </code>
+            </example>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.GetEncodingName(System.Byte[])">
+            <summary>从指定的 <see cref="T:System.SByte"/> 字节数组中判断编码类型</summary>
+            <param name="rawtext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.GB2312Probability(System.SByte[])">
+            <summary>
+            判断是GB2312编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.GBKProbability(System.SByte[])">
+            <summary>
+            判断是GBK编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.HZProbability(System.SByte[])">
+            <summary>
+            判断是HZ编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.BIG5Probability(System.SByte[])">
+            <summary>
+            判断是BIG5编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ENCTWProbability(System.SByte[])">
+            <summary>
+            判断是CNS11643(台湾)编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ISO2022CNProbability(System.SByte[])">
+            <summary>
+            判断是ISO2022CN编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.UTF8Probability(System.SByte[])">
+            <summary>
+            判断是UTF8编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.UnicodeProbability(System.SByte[])">
+            <summary>
+            判断是Unicode编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ASCIIProbability(System.SByte[])">
+            <summary>
+            判断是ASCII编码的可能性
+            </summary>
+            <param name="rawtext">要判断的 <see cref="T:System.SByte"/> 字节数组</param>
+            <returns>返回 0 至 100 之间的可能性</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.Initialize_Frequencies">
+            <summary>
+            初始化必要的条件
+            </summary>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ToByteArray(System.SByte[])">
+            <summary>
+            将此实例中的指定 <see cref="T:System.SByte"/> 字符数组转换到 <see cref="T:System.Byte"/> 字符数组。
+            </summary>
+            <param name="sbyteArray">要转换的 <see cref="T:System.SByte"/> 字符数组</param>
+            <returns>返回转换后的 <see cref="T:System.Byte"/> 字符数组</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ToByteArray(System.String)">
+            <summary>
+            将此实例中的指定字符串转换到 <see cref="T:System.Byte"/> 字符数组。
+            </summary>
+            <param name="sourceString">要转换的字符串</param>
+            <returns>返回转换后的 <see cref="T:System.Byte"/> 字符数组</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ToByteArray(System.Object[])">
+            <summary>
+            将此实例中的指定 <see cref="T:System.Object"/> 数组转换到 <see cref="T:System.Byte"/> 字符数组。
+            </summary>
+            <param name="tempObjectArray">要转换的 <see cref="T:System.Object"/> 字符数组</param>
+            <returns>返回转换后的 <see cref="T:System.Byte"/> 字符数组</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ToSByteArray(System.Byte[])">
+            <summary>
+            将此实例中的指定 <see cref="T:System.Byte"/> 字符数组转换到 <see cref="T:System.SByte"/> 字符数组。
+            </summary>
+            <param name="byteArray">要转换的 <see cref="T:System.Byte"/> 字符数组</param>
+            <returns>返回转换后的 <see cref="T:System.SByte"/> 字符数组</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ReadInput(System.IO.Stream,System.SByte[]@,System.Int32,System.Int32)">
+            <summary>从流读取字节序列,并将此流中的位置提升读取的字节数.</summary>
+            <param name="sourceStream">要读取的流.</param>
+            <param name="target">字节数组。此方法返回时,该缓冲区包含指定的字符数组,该数组的 start 和 (start + count-1) 之间的值由从当前源中读取的字节替换。</param>
+            <param name="start">buffer 中的从零开始的字节偏移量,从此处开始存储从当前流中读取的数据。.</param>
+            <param name="count">要从当前流中最多读取的字节数。</param>
+            <returns>读入缓冲区中的总字节数。如果当前可用的字节数没有请求的字节数那么多,则总字节数可能小于请求的字节数,或者如果已到达流的末尾,则为零 (0)。</returns>
+            <exception cref="T:System.ArgumentException">start 与 count 的和大于缓冲区长度。</exception>
+            <exception cref="T:System.ArgumentNullException">target 为空引用(Visual Basic 中为 Nothing)。</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset 或 count 为负。</exception>
+            <exception cref="T:System.IO.IOException">发生 I/O 错误。</exception>
+            <exception cref="T:System.NotSupportedException">流不支持读取。</exception>
+            <exception cref="T:System.ObjectDisposedException">在流关闭后调用方法。</exception>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.ReadInput(System.IO.TextReader,System.SByte[]@,System.Int32,System.Int32)">
+            <summary>从字符系列读取字节序列,并将此字符系列中的位置提升读取的字节数。</summary>
+            <param name="sourceTextReader">要读取的流。</param>
+            <param name="target">字节数组。此方法返回时,该缓冲区包含指定的字符数组,该数组的 start 和 (start + count-1) 之间的值由从当前源中读取的字节替换。</param>
+            <param name="start">buffer 中的从零开始的字节偏移量,从此处开始存储从当前流中读取的数据。.</param>
+            <param name="count">要从当前流中最多读取的字节数。</param>
+            <returns>读入缓冲区中的总字节数。如果当前可用的字节数没有请求的字节数那么多,则总字节数可能小于请求的字节数,或者如果已到达流的末尾,则为零 (0)。</returns>
+            <exception cref="T:System.ArgumentException">start 与 count 的和大于缓冲区长度。</exception>
+            <exception cref="T:System.ArgumentNullException">target 为空引用(Visual Basic 中为 Nothing)。</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">offset 或 count 为负。</exception>
+            <exception cref="T:System.IO.IOException">发生 I/O 错误。</exception>
+            <exception cref="T:System.NotSupportedException">流不支持读取。</exception>
+            <exception cref="T:System.ObjectDisposedException">在流关闭后调用方法。</exception>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.FileLength(System.IO.FileInfo)">
+            <summary>
+            检测当前文件的大小
+            </summary>
+            <param name="file">被检测的文件</param>
+            <returns>当前文件的大小。</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.Identity(System.Int64)">
+            <summary>
+            This method returns the literal value received
+            </summary>
+            <param name="literal">The literal to return</param>
+            <returns>The received value</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.Identity(System.UInt64)">
+            <summary>
+            This method returns the literal value received
+            </summary>
+            <param name="literal">The literal to return</param>
+            <returns>The received value</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.Identity(System.Single)">
+            <summary>
+            This method returns the literal value received
+            </summary>
+            <param name="literal">The literal to return</param>
+            <returns>The received value</returns>
+        </member>
+        <member name="M:CC.Utility.MyEncoding.IdentifyEncoding.Identity(System.Double)">
+            <summary>
+            This method returns the literal value received
+            </summary>
+            <param name="literal">The literal to return</param>
+            <returns>The received value</returns>
+        </member>
+        <member name="P:CC.Utility.MyEncoding.IdentifyEncoding.Instance">
+            <summary>全局实例</summary>
+        </member>
+        <member name="T:CC.Utility.iniHelper">
+            <summary>配置文件操作类</summary>
+        </member>
+        <member name="M:CC.Utility.iniHelper.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:CC.Utility.iniHelper.SetSection(System.String)">
+            <summary>设置当前的默认section</summary>
+            <param name="section"></param>
+        </member>
+        <member name="M:CC.Utility.iniHelper.Write(System.String,System.String,System.String)">
+            <summary>写入配置文件</summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.iniHelper.ReadValue(System.String,System.String)">
+            <summary>读取配置文件</summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.iniHelper.ReadValue(System.String,System.String,System.String)">
+            <summary>读取配置文件</summary>
+            <param name="path"></param>
+            <param name="section"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.iniHelper.Write(System.String,System.String,System.String,System.String)">
+            <summary>写入配置文件</summary>
+            <param name="path"></param>
+            <param name="section"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:CC.Utility.iniHelper.Item(System.String)">
+            <summary>默认section的key的值</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.iniHelper.Item(System.String,System.String)">
+            <summary>section的key的值</summary>
+            <param name="section"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Utility.LogHelper">
+            <summary>日志帮助文件</summary>
+        </member>
+        <member name="F:CC.Utility.LogHelper.nowDate">
+            <summary>当前longWrite的日期</summary>
+        </member>
+        <member name="M:CC.Utility.LogHelper.WriteLog(System.String)">
+            <summary>写日志</summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:CC.Utility.LogHelper.Close">
+            <summary>关闭</summary>
+        </member>
+        <member name="M:CC.Utility.LogHelper.#ctor(System.String)">
+            <summary>构造函数</summary>
+            <param name="logpath">日志路径</param>
+        </member>
+        <member name="T:CC.Utility.MyAssembly.AppDomainLoader">
+            <summary>程序域加载类</summary>
+        </member>
+        <member name="F:CC.Utility.MyAssembly.AppDomainLoader.AppAssemblyName">
+            <summary>AppDomain的程序集名称</summary>
+        </member>
+        <member name="M:CC.Utility.MyAssembly.AppDomainLoader.LoadDll``1(System.String)">
+            <summary>加载dll</summary>
+            <typeparam name="T"></typeparam>
+            <param name="friendlyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.MyAssembly.AppDomainLoader.Unload``1(``0@)">
+            <summary>卸载dll</summary>
+            <typeparam name="T"></typeparam>
+            <param name="domainobj"></param>
+        </member>
+        <member name="T:CC.Utility.MyAssembly.DomainObject">
+            <summary>程序域对象</summary>
+        </member>
+        <member name="P:CC.Utility.MyAssembly.DomainObject.Domain">
+            <summary>程序域</summary>
+        </member>
+        <member name="T:CC.Utility.OtherFun">
+            <summary>其他函数</summary>
+        </member>
+        <member name="M:CC.Utility.OtherFun._UToS(System.String)">
+            <summary>
+            将字符串中的u6a7d格式的unicode码转换为对应汉字
+            </summary>
+        </member>
+        <member name="M:CC.Utility.OtherFun._PerToS(System.String,System.Text.Encoding)">
+            <summary>
+            将字符串%E6%AD%A3的格式转换为对应汉字
+            </summary>
+        </member>
+        <member name="M:CC.Utility.OtherFun._SToPer(System.String,System.Text.Encoding)">
+            <summary>
+            将汉字转换为对应格式的字符串,如%E6%AD%A3
+            </summary>
+        </member>
+        <member name="M:CC.Utility.OtherFun._ntom(System.String,System.Int32,System.Int32)">
+            <summary>
+            n进制转换成m进制
+            </summary>
+        </member>
+        <member name="M:CC.Utility.OtherFun._CTozI(System.Char)">
+            <summary>将字符变为对应的10进制的数，如a->10,z->35</summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.OtherFun._zIToC(System.Int32)">
+            <summary>
+            将10进制的i用字符表示出来，如10->a,35->z
+            </summary>
+        </member>
+        <member name="M:CC.Utility.OtherFun._IPToUInt64(System.String)">
+            <summary>将ip:port形式的字符串转换为64位的UINT</summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.OtherFun._UInt64ToIP(System.UInt64)">
+            <summary>将64位的UINT转换为ip:port形式的字符串</summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.OtherFun.GetLocalTimeSpan">
+            <summary>得到本地时间与utc时间的差</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.OtherFun.ToJavaDateTime(System.DateTime)">
+            <summary>得到java的时间</summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.OtherFun.FromJavaDateTime(System.Int64)">
+            <summary>从java时间转换为datetime</summary>
+            <param name="javaTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Utility.Serialize.SerializeHelper">
+            <summary>序列化帮助</summary>
+        </member>
+        <member name="M:CC.Utility.Serialize.SerializeHelper.Serialize(System.String,System.Object)">
+            <summary>序列化对象到文件</summary>
+            <param name="path">文件路径</param>
+            <param name="obj">对象</param>
+        </member>
+        <member name="M:CC.Utility.Serialize.SerializeHelper.Deserialize(System.String)">
+            <summary>反序列化</summary>
+            <param name="path">储存序列化对象的文件</param>
+            <returns>得到的对象</returns>
+        </member>
+        <member name="M:CC.Utility.Serialize.SerializeHelper.Serialize(System.IO.Stream,System.Object)">
+            <summary>序列化对象到流</summary>
+            <param name="stream">流</param>
+            <param name="obj">对象</param>
+        </member>
+        <member name="M:CC.Utility.Serialize.SerializeHelper.Deserialize(System.IO.Stream)">
+            <summary>反序列化</summary>
+            <param name="stream">储存序列化对象的流(注意流的Position)</param>
+            <returns>得到的对象</returns>
+        </member>
+        <member name="T:CC.Utility.StopWatchHelper">
+            <summary>运行时间查看类</summary>
+        </member>
+        <member name="M:CC.Utility.StopWatchHelper.Start(System.UInt32)">
+            <summary>开启指定编号的计时器</summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:CC.Utility.StopWatchHelper.Stop(System.UInt32)">
+            <summary>停止指定编号的计时器</summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.StopWatchHelper.Instance">
+            <summary>单例对象</summary>
+        </member>
+        <member name="T:CC.Utility.Package.BytePackageHelper">
+            <summary>比特包帮助类</summary>
+        </member>
+        <member name="F:CC.Utility.Package.BytePackageHelper.EmptyPackage">
+            <summary>空包</summary>
+        </member>
+        <member name="M:CC.Utility.Package.BytePackageHelper.UnPackage(CC.Utility.Package.PackageDataInfo)">
+            <summary>解包</summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.BytePackageHelper.Package(System.Byte[],CC.Utility.Package.BytePackageType)">
+            <summary>压包</summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.Package.BytePackageHelper.Instance">
+            <summary>比特包实例</summary>
+        </member>
+        <member name="T:CC.Utility.Package.BytePackageType">
+            <summary>比特包类型</summary>
+        </member>
+        <member name="F:CC.Utility.Package.BytePackageType.Normal">
+            <summary>正常</summary>
+        </member>
+        <member name="F:CC.Utility.Package.BytePackageType.MaxSub">
+            <summary>255-value</summary>
+        </member>
+        <member name="T:CC.Utility.Package.PackageDataInfo">
+            <summary>数据包</summary>
+        </member>
+        <member name="M:CC.Utility.Package.PackageDataInfo.#ctor(System.Byte,System.Byte[])">
+            <summary>构造函数</summary>
+            <param name="head"></param>
+            <param name="data"></param>
+        </member>
+        <member name="P:CC.Utility.Package.PackageDataInfo.Length">
+            <summary>数据长度</summary>
+        </member>
+        <member name="P:CC.Utility.Package.PackageDataInfo.Head">
+            <summary>(打包类型)|(自由数据&lt;&lt;4)</summary>
+        </member>
+        <member name="P:CC.Utility.Package.PackageDataInfo.Data">
+            <summary>数据</summary>
+        </member>
+        <member name="T:CC.Utility.Package.PackageReader">
+            <summary>读包类</summary>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.#ctor(CC.Utility.Package.PackageDataInfo,System.Text.Encoding,CC.Utility.Binary.EndianType)">
+            <summary>构造函数</summary>
+            <param name="package"></param>
+            <param name="encoding"></param>
+            <param name="endianType"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadInt16">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadInt32">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadInt64">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadUInt16">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadUInt32">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadUInt64">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadSingle">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadDouble">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadByte">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadSByte">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.PeekByte">
+            <summary>返回下一个byte数据,游标不移动</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadBoolean">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadJavaUTF8">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadString">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadDateTime">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.ReadJavaDateTime">
+            <summary></summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.Read``1">
+            <summary></summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.Read``1(``0)">
+            <summary></summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageReader.Close">
+            <summary>关闭</summary>
+        </member>
+        <member name="P:CC.Utility.Package.PackageReader.BinaryReader">
+            <summary></summary>
+            <value>The binary reader.</value>
+        </member>
+        <member name="T:CC.Utility.Package.PackageWriter">
+            <summary>写包类</summary>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.#ctor(System.Text.Encoding,CC.Utility.Binary.EndianType)">
+            <summary>构造函数</summary>
+            <param name="encoding"></param>
+            <param name="endianType"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteInt16(System.Int16)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteInt32(System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteInt64(System.Int64)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteUInt16(System.UInt16)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteUInt32(System.UInt32)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteUInt64(System.UInt64)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteSingle(System.Single)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteDouble(System.Double)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteByte(System.Byte)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteSByte(System.SByte)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteBoolean(System.Boolean)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteBytes(System.Byte[])">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary></summary>
+            <param name="value"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteJavaUTF8(System.String)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteString(System.String)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteDateTime(System.DateTime)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.WriteJavaDateTime(System.Nullable{System.DateTime})">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.Write(CC.Utility.Binary.IBinaryAble[])">
+            <summary></summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.Write(CC.Utility.Binary.IBinaryAble)">
+            <summary></summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.Close">
+            <summary>关闭</summary>
+        </member>
+        <member name="M:CC.Utility.Package.PackageWriter.GetPackage(CC.Utility.Package.BytePackageType)">
+            <summary>导出包</summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Utility.Package.PackageWriter.Ms">
+            <summary>
+            流
+            </summary>
+            <value>The ms.</value>
+        </member>
+        <member name="P:CC.Utility.Package.PackageWriter.Position">
+            <summary>
+            游标位置
+            </summary>
+            <value>The position.</value>
+        </member>
+    </members>
+</doc>

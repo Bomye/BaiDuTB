@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CCFun.MyTask</name>
+    </assembly>
+    <members>
+        <member name="T:CC.MyTask.AutoQueueTask`1">
+            <summary>自动队列任务类</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:CC.MyTask.AutoTaskBase`1">
+            <summary>自动任务基类</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:CC.MyTask.TaskBase">
+            <summary>任务基础类</summary>
+        </member>
+        <member name="T:CC.MyTask.IMyTask">
+            <summary>任务接口</summary>
+        </member>
+        <member name="T:CC.MyTask.IMyName">
+            <summary>名称接口</summary>
+        </member>
+        <member name="P:CC.MyTask.IMyName.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="M:CC.MyTask.IMyTask.Stop">
+            <summary>停止任务</summary>
+        </member>
+        <member name="M:CC.MyTask.IMyTask.Start">
+            <summary>开始任务</summary>
+        </member>
+        <member name="M:CC.MyTask.IMyTask.Wait">
+            <summary>等待任务结束</summary>
+        </member>
+        <member name="P:CC.MyTask.IMyTask.IsRunning">
+            <summary>任务是否在运行</summary>
+        </member>
+        <member name="E:CC.MyTask.IMyTask.ShowMsgEvent">
+            <summary>设置发送消息函数</summary>
+        </member>
+        <member name="M:CC.MyTask.TaskBase.ShowMsg(System.String,CC.MyTask.MsgType)">
+            <summary>发送消息</summary>
+            <param name="msgType"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:CC.MyTask.TaskBase.ShowMsg(System.String)">
+            <summary>发送MsgType为Default级别的消息</summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:CC.MyTask.TaskBase.Start">
+            <summary>开始任务-自动开启新线程执行任务</summary>
+        </member>
+        <member name="M:CC.MyTask.TaskBase.Stop">
+            <summary>停止任务</summary>
+        </member>
+        <member name="M:CC.MyTask.TaskBase.Wait">
+            <summary>等待任务结束</summary>
+        </member>
+        <member name="M:CC.MyTask.TaskBase.Fun">
+            <summary>任务循环调用的函数</summary>
+        </member>
+        <member name="M:CC.MyTask.TaskBase.Finalize">
+            <summary>析构函数</summary>
+        </member>
+        <member name="P:CC.MyTask.TaskBase.Name">
+            <summary>得到任务名称</summary>
+            <returns></returns>
+        </member>
+        <member name="P:CC.MyTask.TaskBase.IsRunning">
+            <summary>任务是否在运行</summary>
+        </member>
+        <member name="P:CC.MyTask.TaskBase.CanRun">
+            <summary>是否处于运行状态，初始为false,当调用start后变为true,当调用stop后变为false</summary>
+        </member>
+        <member name="E:CC.MyTask.TaskBase.OnThreadFunStopedEvent">
+            <summary>正常停止线程任务前触发(任务线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.TaskBase.OnThreadFunStartedEvent">
+            <summary>正常启动线程任务时触发(任务线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.TaskBase.OnStartedEvent">
+            <summary>Start函数执行后出发(调用线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.TaskBase.OnStopedEvent">
+            <summary>Stop函数执行后出发(调用线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.TaskBase.ShowMsgEvent">
+            <summary>发送消息函数</summary>
+        </member>
+        <member name="M:CC.MyTask.AutoTaskBase`1.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.MyTask.AutoTaskBase`1.Fun">
+            <summary>任务循环调用的函数</summary>
+        </member>
+        <member name="M:CC.MyTask.AutoTaskBase`1.GetTask(`0@)">
+            <summary>获取任务函数</summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MyTask.AutoTaskBase`1.HasTask">
+            <summary>检测是否有任务任务函数</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MyTask.AutoTaskBase`1.AddTask(`0)">
+            <summary>添加任务函数</summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:CC.MyTask.AutoTaskBase`1.Fun(`0)">
+            <summary>任务处理函数</summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:CC.MyTask.AutoTaskBase`1.NoTask">
+            <summary>在没有任务的时候调用</summary>
+        </member>
+        <member name="P:CC.MyTask.AutoTaskBase`1.NoTaskSleepControl">
+            <summary>调用NoTask函数的时间控制，默认间隔3600s,休息1000ms</summary>
+        </member>
+        <member name="P:CC.MyTask.AutoTaskBase`1.FunSleepControl">
+            <summary>调用Fun函数的时间控制,默认间隔1s,休息1000ms</summary>
+        </member>
+        <member name="E:CC.MyTask.AutoTaskBase`1.afterFunEvent">
+            <summary>当执行完fun函数后调用</summary>
+        </member>
+        <member name="E:CC.MyTask.AutoTaskBase`1.afterNoTaskEvent">
+            <summary>当执行完NoTask函数后调用</summary>
+        </member>
+        <member name="M:CC.MyTask.AutoQueueTask`1.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.MyTask.AutoQueueTask`1.GetTask(`0@)">
+            <summary>获取任务函数</summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MyTask.AutoQueueTask`1.HasTask">
+            <summary>检测是否有任务任务函数</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MyTask.AutoQueueTask`1.AddTask(`0)">
+            <summary>添加任务函数</summary>
+            <param name="task"></param>
+        </member>
+        <member name="T:CC.MyTask.AutoTimeTask`1">
+            <summary>自动时间任务类</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CC.MyTask.AutoTimeTask`1.#ctor(System.Boolean)">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.MyTask.AutoTimeTask`1.GetTask(`0@)">
+            <summary>获取任务函数</summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MyTask.AutoTimeTask`1.HasTask">
+            <summary>检测是否有任务任务函数</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MyTask.AutoTimeTask`1.AddTask(`0)">
+            <summary>添加任务函数</summary>
+            <param name="task"></param>
+        </member>
+        <member name="T:CC.MyTask.SleepControl">
+            <summary>休息控制</summary>
+        </member>
+        <member name="F:CC.MyTask.SleepControl._sleepTime_ms">
+            <summary>如果未到允许调用init的时间时sleep的时间,单位ms</summary>
+        </member>
+        <member name="F:CC.MyTask.SleepControl._interval_ms">
+            <summary>2次任务之间的间隔时间,单位为ms</summary>
+        </member>
+        <member name="F:CC.MyTask.SleepControl._nextTime">
+            <summary>下次允许调用的时间</summary>
+        </member>
+        <member name="M:CC.MyTask.SleepControl.#ctor(System.Int32,System.Int32)">
+            <summary>构造函数</summary>
+            <param name="interval_s">间隔时间</param>
+            <param name="sleepTime_ms">sleep的时间</param>
+        </member>
+        <member name="M:CC.MyTask.SleepControl.CanRun">
+            <summary>是否能运行任务，如果能，返回true,否则休息指定时间后返回false</summary>
+            <returns></returns>
+        </member>
+        <member name="P:CC.MyTask.SleepControl.SleepTime_ms">
+            <summary>如果未到允许调用init的时间时sleep的时间,单位ms</summary>
+        </member>
+        <member name="P:CC.MyTask.SleepControl.Interval_ms">
+            <summary>2次任务之间的间隔时间,单位为s</summary>
+        </member>
+        <member name="P:CC.MyTask.SleepControl.NextTime">
+            <summary>下次允许调用的时间</summary>
+        </member>
+        <member name="T:CC.MyTask.ITimeable">
+            <summary>时间接口</summary>
+        </member>
+        <member name="P:CC.MyTask.ITimeable.Time">
+            <summary>获取时间</summary>
+        </member>
+        <member name="T:CC.MyTask.TimeTask`1">
+            <summary>时间任务</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CC.MyTask.TimeTask`1.#ctor(`0)">
+            <summary>构造函数</summary>
+            <param name="task"></param>
+        </member>
+        <member name="P:CC.MyTask.TimeTask`1.Data">
+            <summary>获取任务数据</summary>
+        </member>
+        <member name="P:CC.MyTask.TimeTask`1.Time">
+            <summary>获取任务的时间</summary>
+        </member>
+        <member name="P:CC.MyTask.TimeTask`1.NextTask">
+            <summary>下一个任务</summary>
+        </member>
+        <member name="T:CC.MyTask.TimeTaskData`1">
+            <summary>时间任务类数据</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CC.MyTask.TimeTaskData`1.#ctor(`0,System.DateTime)">
+            <summary>构造函数</summary>
+            <param name="data"></param>
+            <param name="time"></param>
+        </member>
+        <member name="M:CC.MyTask.TimeTaskData`1.Equals(System.Object)">
+            <summary>重载Equals</summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MyTask.TimeTaskData`1.GetHashCode">
+            <summary>重载GetHashCode</summary>
+            <returns></returns>
+        </member>
+        <member name="P:CC.MyTask.TimeTaskData`1.Data">
+            <summary>数据</summary>
+        </member>
+        <member name="P:CC.MyTask.TimeTaskData`1.Time">
+            <summary>时间</summary>
+        </member>
+        <member name="T:CC.MyTask.TaskView">
+            <summary>任务窗体</summary>
+        </member>
+        <member name="F:CC.MyTask.TaskView.bIsShowed">
+            <summary>是否显示过窗体</summary>
+        </member>
+        <member name="F:CC.MyTask.TaskView.dlg">
+            <summary>任务窗体</summary>
+        </member>
+        <member name="M:CC.MyTask.TaskView.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.MyTask.TaskView.AddTask(CC.MyTask.IMyTask)">
+            <summary>添加任务</summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:CC.MyTask.TaskView.AddTask(System.Collections.Generic.IEnumerable{CC.MyTask.IMyTask})">
+            <summary>添加多个任务</summary>
+            <param name="tasks"></param>
+        </member>
+        <member name="M:CC.MyTask.TaskView.SetDlgTitle(System.String)">
+            <summary>设置窗口标题</summary>
+            <param name="title"></param>
+        </member>
+        <member name="M:CC.MyTask.TaskView.ShowDialog">
+            <summary>显示窗体</summary>
+        </member>
+        <member name="M:CC.MyTask.TaskView.LogMsg(System.String,CC.MyTask.MsgType)">
+            <summary>输出msg到日志，如果type为warning或error时将同时输出到error页</summary>
+            <param name="msgStr"></param>
+            <param name="type"></param>
+        </member>
+        <member name="E:CC.MyTask.TaskView.ShowMsgEvent">
+            <summary>设置消息显示事件</summary>
+        </member>
+        <member name="F:CC.MyTask.Dlg.MyTabControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CC.MyTask.Dlg.MyTabControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CC.MyTask.Dlg.MyTabControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:CC.MyTask.Dlg.TaskViewPage.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CC.MyTask.Dlg.TaskViewPage.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CC.MyTask.Dlg.TaskViewPage.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:CC.MyTask.Dlg.TaskWorkStation.AddTask(CC.MyTask.IMyTask)">
+            <summary>添加任务</summary>
+            <param name="task"></param>
+        </member>
+        <member name="F:CC.MyTask.Dlg.TaskWorkStation.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CC.MyTask.Dlg.TaskWorkStation.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CC.MyTask.Dlg.TaskWorkStation.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CC.MyTask.MsgType">
+            <summary>消息类型</summary>
+        </member>
+        <member name="F:CC.MyTask.MsgType.Default">
+            <summary>默认</summary>
+        </member>
+        <member name="F:CC.MyTask.MsgType.Tip">
+            <summary>提示</summary>
+        </member>
+        <member name="F:CC.MyTask.MsgType.System">
+            <summary>系统</summary>
+        </member>
+        <member name="F:CC.MyTask.MsgType.Warning">
+            <summary>警告</summary>
+        </member>
+        <member name="F:CC.MyTask.MsgType.Error">
+            <summary>错误</summary>
+        </member>
+        <member name="T:CC.MyTask.ThreadTask.ThreadTask`1">
+            <summary>线程任务</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:CC.MyTask.ThreadTask.ThreadTaskBase">
+            <summary>多线程任务队列</summary>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTaskBase.ShowMsg(System.String,CC.MyTask.MsgType)">
+            <summary>发送消息</summary>
+            <param name="msgType"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTaskBase.ShowMsg(System.String)">
+            <summary>发送MsgType为Default级别的消息</summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTaskBase.Start">
+            <summary>开始任务-自动开启新线程执行任务</summary>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTaskBase.Stop">
+            <summary>停止任务</summary>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTaskBase.Wait">
+            <summary>等待任务结束</summary>
+        </member>
+        <member name="F:CC.MyTask.ThreadTask.ThreadTaskBase.ThreadCount">
+            <summary>设置线程数</summary>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTaskBase.Fun(System.Int32)">
+            <summary>任务循环调用的函数</summary>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTaskBase.Finalize">
+            <summary>析构函数</summary>
+        </member>
+        <member name="P:CC.MyTask.ThreadTask.ThreadTaskBase.Name">
+            <summary>得到任务名称</summary>
+            <returns></returns>
+        </member>
+        <member name="P:CC.MyTask.ThreadTask.ThreadTaskBase.IsRunning">
+            <summary>任务是否在运行</summary>
+        </member>
+        <member name="P:CC.MyTask.ThreadTask.ThreadTaskBase.CanRun">
+            <summary>是否处于运行状态，初始为false,当调用start后变为true,当调用stop后变为false</summary>
+        </member>
+        <member name="E:CC.MyTask.ThreadTask.ThreadTaskBase.OnStartingEvent">
+            <summary>Start函数执行中(调用线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.ThreadTask.ThreadTaskBase.OnThreadFunStopedEvent">
+            <summary>正常停止线程任务前触发(任务线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.ThreadTask.ThreadTaskBase.OnThreadFunStartedEvent">
+            <summary>正常启动线程任务时触发(任务线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.ThreadTask.ThreadTaskBase.OnStartedEvent">
+            <summary>Start函数执行后出发(调用线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.ThreadTask.ThreadTaskBase.OnStopedEvent">
+            <summary>Stop函数执行后出发(调用线程中执行)</summary>
+        </member>
+        <member name="E:CC.MyTask.ThreadTask.ThreadTaskBase.ShowMsgEvent">
+            <summary>发送消息函数</summary>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTask`1.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTask`1.NoTask">
+            <summary>在任务开始的时候调用</summary>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTask`1.Fun(System.Int32)">
+            <summary>任务循环调用的函数</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTask`1.Fun(System.Int32,`0)">
+            <summary>任务处理函数</summary>
+            <param name="threadId">线程id,0~max</param>
+            <param name="task"></param>
+            <returns>是否成功执行</returns>
+        </member>
+        <member name="M:CC.MyTask.ThreadTask.ThreadTask`1.AddTask(`0)">
+            <summary>添加任务</summary>
+            <param name="task"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CCFun.ORM.Utility</name>
+    </assembly>
+    <members>
+        <member name="T:CC.ORM.DataControl">
+            <summary>数据库操作通用类</summary>
+        </member>
+        <member name="F:CC.ORM.DataControl._transaction">
+            <summary>IDbTransaction对象（包装的MySqlTransaction对象）</summary>
+        </member>
+        <member name="M:CC.ORM.DataControl.#ctor(CC.ORM.IConnectionSource)">
+            <summary>使用指定数据源来初始化 DataControl  类的新实例。</summary>
+            <param name="connSource">数据源</param>
+        </member>
+        <member name="M:CC.ORM.DataControl.BeginTransaction">
+            <summary>
+            开始数据库事务。
+            </summary>
+        </member>
+        <member name="M:CC.ORM.DataControl.Commit">
+            <summary>
+            提交事务处理。
+            </summary>
+        </member>
+        <member name="M:CC.ORM.DataControl.Rollback">
+            <summary>
+            从挂起状态回滚事务。
+            </summary>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteDataSet(System.String)">
+            <summary>
+             执行查询，并返回查询所返回的结果集DataSet。
+            </summary>
+            <param name="commandtext">命令文本</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteDataSet(System.Data.CommandType,System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行查询，并返回查询所返回的结果集DataSet。
+            </summary>
+            <param name="commandtype">指定如何解释命令字符串</param>
+            <param name="commandtext">命令文本</param>
+            <param name="parameter">IDbDataParameter参数列表</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteNonQuery(System.String)">
+            <summary>
+            对连接执行 Transact-SQL 语句并返回受影响的行数。
+            </summary>
+            <param name="cmdText">命令文本</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteNonQuery(System.Data.CommandType,System.String,System.Data.IDataParameter[])">
+            <summary>
+            对连接执行 Transact-SQL 语句并返回受影响的行数。
+            </summary>
+            <param name="commandtype">IDbConnection对象</param>
+            <param name="commandtext">指定如何解析命令字符串</param>
+            <param name="parameter">命令文本</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteReader(System.String)">
+            <summary>
+            将 System.Data.SqlClient.SqlCommand.CommandText 发送到
+            System.Data.SqlClient.SqlCommand.Connection 并生成一个 System.Data.SqlClient.SqlDataReader。
+            </summary>
+            <param name="cmdText">执行的命令文本</param>
+            <returns>IDataReader对象</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteReader(System.Data.CommandType,System.String,System.Data.IDataParameter[])">
+            <summary>
+            将 System.Data.SqlClient.SqlCommand.CommandText 发送到
+            System.Data.SqlClient.SqlCommand.Connection 并生成一个 System.Data.SqlClient.SqlDataReader。
+            </summary>
+            <param name="cmdType">指定如何解析命令字符串</param>
+            <param name="cmdText">命令文本</param>
+            <param name="parameter">IDataParameter参数列表</param>
+            <returns>IDataReader对象</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteScalar(System.String)">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。忽略其他列或行。
+            </summary>
+            <param name="cmdText">命令文本</param>
+            <returns>结果集中第一行的第一列；如果结果集为空，则为空引用（在 Visual Basic 中为 Nothing）</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteScalar(System.Data.CommandType,System.String,System.Data.IDataParameter[])">
+            <summary>
+             执行查询，并返回查询所返回的结果集中第一行的第一列。忽略其他列或行。
+            </summary>
+            <param name="cmdType">指定如何解析命令字符串</param>
+            <param name="cmdText">命令文本</param>
+            <param name="parameter">IDataParameter参数列表</param>
+            <returns>结果集中第一行的第一列；如果结果集为空，则为空引用（在 Visual Basic 中为 Nothing）。</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteTable(System.String)">
+            <summary>
+            执行查询，并返回查询所返回的结果集DataTable。
+            </summary>
+            <param name="cmdText">命令文本</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteTable(System.Data.CommandType,System.String,System.Data.IDataParameter[])">
+             <summary>
+            执行查询，并返回查询所返回的结果集DataTable。
+             </summary>
+             <param name="cmdType">指定如何解析命令字符串</param>
+             <param name="cmdText">命令文本</param>
+             <param name="parameter">IDataParameter参数列表</param>
+             <returns>DataTable</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.ExecuteTable(System.Data.CommandType,System.String,System.Int32,System.Data.IDataParameter[])">
+             <summary>
+            执行查询，并返回查询所返回的结果集DataTable。
+             </summary>
+             <param name="cmdType">指定如何解析命令字符串</param>
+             <param name="cmdText">命令文本</param>
+             <param name="topn">取前几条数据</param>
+             <param name="parameter">IDataParameter参数列表</param>
+             <returns>DataTable</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.GetSchema(System.String)">
+            <summary>得到表的结构</summary>
+            <param name="tableName">表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.InitSqlCommand(System.Data.CommandType,System.String,System.Data.IDataParameter[])">
+            <summary>
+            私有方法实现内部类的SqlCommand的初始化
+            </summary>
+            <param name="commandtype">IDbConnection对象</param>
+            <param name="commandtext">指定如何解析命令字符串</param>
+            <param name="parameter">命令文本</param>
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.GetSqlCommand(System.Data.CommandType,System.String)">
+            <summary>
+            实现内部类的SqlCommand的初始化
+            </summary>
+            <param name="commandtype"></param>
+            <param name="commandtext"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.Close">
+            <summary>
+            关闭数据库连接。
+            </summary>
+        </member>
+        <member name="M:CC.ORM.DataControl.SafeClose">
+            <summary>安全回滚并关闭</summary>
+        </member>
+        <member name="M:CC.ORM.DataControl.Dispose">
+            <summary>
+            执行与释放或重置非托管资源相关的应用程序定义的任务。
+            </summary>
+        </member>
+        <member name="M:CC.ORM.DataControl.Finalize">
+            <summary>释放链接</summary>
+        </member>
+        <member name="M:CC.ORM.DataControl.GetParameters(System.Object,CC.ORM.Utility.TableInfo.ColumnDetails[])">
+            <summary>得到command的所有params</summary>
+            <param name="obj"></param>
+            <param name="columns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.GetParameter(System.Object,CC.ORM.Utility.TableInfo.ColumnDetails)">
+            <summary>得到command的params</summary>
+            <param name="obj"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.CreateParameterMore(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Object})">
+            <summary>
+            参数名称与参数值键值对新建IDataParameter集合List
+            </summary>
+            <param name="parametername">参数名称集合</param>
+            <param name="parametervalue">参数值集合</param>
+            <returns>IDataParameter集合</returns>
+        </member>
+        <member name="M:CC.ORM.DataControl.QuickUpSert``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>快速插入或更新数据</summary>
+            <typeparam name="T"></typeparam>
+            <param name="datas"></param>
+        </member>
+        <member name="P:CC.ORM.DataControl.TranBegin">
+            <summary>是否已开始数据库事务处理</summary>
+        </member>
+        <member name="P:CC.ORM.DataControl.ConnectionSource">
+            <summary>IDbConnection对象（包装的MySqlConnection对象）</summary>
+        </member>
+        <member name="P:CC.ORM.DataControl.SqlTransaction">
+            <summary>IDbTransaction对象</summary>
+        </member>
+        <member name="T:CC.ORM.IConnectionSource">
+            <summary>数据源接口</summary>
+        </member>
+        <member name="M:CC.ORM.IConnectionSource.GetDataAdapter(System.Data.Common.DbCommand)">
+            <summary>使用command对象创建一个dataAdapter实例</summary>
+            <param name="cmd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.ORM.IConnectionSource.CreateParameterSingle(System.String,System.Object)">
+            <summary>
+            用参数名称和参数的值新建单个IDataParameter接口对象
+            </summary>
+            <param name="parametername">要映射的参数的名称</param>
+            <param name="parametervalue"> 一个 System.Object，它是 System.Data.IDataParameter实例的值。</param>
+            <returns>IDataParameter</returns>
+        </member>
+        <member name="M:CC.ORM.IConnectionSource.CreateParameterMore(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Object})">
+            <summary>
+            参数名称与参数值键值对新建IDataParameter集合List
+            </summary>
+            <param name="parametername">参数名称集合</param>
+            <param name="parametervalue">参数值集合</param>
+            <returns>IDataParameter集合</returns>
+        </member>
+        <member name="M:CC.ORM.IConnectionSource.QuickUpsert``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>快速插入或更新数据</summary>
+            <typeparam name="T"></typeparam>
+            <param name="datas"></param>
+        </member>
+        <member name="P:CC.ORM.IConnectionSource.Connection">
+            <summary>数据库链接</summary>
+        </member>
+        <member name="P:CC.ORM.IConnectionSource.ConnectionString">
+            <summary>获取或设置本次执行的数据源的连接字符串</summary>
+        </member>
+        <member name="T:CC.ORM.IDataFactory">
+            <summary>
+            数据源类型（IDataSource），静态类工厂（该工厂根据App.config中appSettings配置节中DataSourceType节点定义的默认数据源类型），
+            新的数据源（IDataSource）对象是根据配置文件来建立的；
+            </summary>
+        </member>
+        <member name="M:CC.ORM.IDataFactory.Create">
+            <summary>
+            获取默认数据源操作对象，没有指定任何连接字符串
+            </summary>
+            <returns>IDataSourceType</returns>
+        </member>
+        <member name="M:CC.ORM.IDataFactory.Create(System.String)">
+            <summary>
+            用指定的数据库连接字符串，获取默认数据源操作对象
+            </summary>
+            <param name="connectionString">数据库连接字符串</param>
+            <returns>IDataSourceType</returns>
+        </member>
+        <member name="M:CC.ORM.IDataFactory.GetCommandData(CC.ORM.Utility.TableInfo.TableDetails)">
+            <summary>得到表的命令数据</summary>
+            <param name="tableinfo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CC.ORM.ColumnAttribute">
+            <summary>
+             指定该属性是否是Table中的主键
+            </summary>
+        </member>
+        <member name="F:CC.ORM.ColumnAttribute._isprimary">
+            <summary>是否是主键</summary>
+        </member>
+        <member name="F:CC.ORM.ColumnAttribute._isidentity">
+            <summary>是否自增长</summary>
+        </member>
+        <member name="F:CC.ORM.ColumnAttribute._fieldname">
+            <summary>数据库内字段的名称</summary>
+        </member>
+        <member name="P:CC.ORM.ColumnAttribute.IsPrimary">
+            <summary>是否是主键</summary>
+        </member>
+        <member name="P:CC.ORM.ColumnAttribute.IsIdentity">
+            <summary>是否自增长</summary>
+        </member>
+        <member name="P:CC.ORM.ColumnAttribute.Fieldname">
+            <summary>数据库内字段的名称</summary>
+        </member>
+        <member name="P:CC.ORM.ColumnAttribute.EnablefieldName">
+            <summary>是否插入数据库的字段名称</summary>
+        </member>
+        <member name="T:CC.ORM.TableAttribute">
+            <summary>
+            指定Model所对应的Table名称
+            </summary>
+        </member>
+        <member name="F:CC.ORM.TableAttribute._tablename">
+            <summary>表的名称</summary>
+        </member>
+        <member name="F:CC.ORM.TableAttribute._databasename">
+            <summary>数据库的名称</summary>
+        </member>
+        <member name="P:CC.ORM.TableAttribute.TableName">
+            <summary>映射为表的名称</summary>
+        </member>
+        <member name="P:CC.ORM.TableAttribute.DatabaseName">
+            <summary>映射为数据库的名称</summary>
+        </member>
+        <member name="P:CC.ORM.TableAttribute.Version">
+            <summary>版本信息</summary>
+        </member>
+        <member name="T:CC.ORM.Utility.ServerInfo">
+            <summary>数据库服务器信息</summary>
+        </member>
+        <member name="M:CC.ORM.Utility.ServerInfo.#ctor(System.String,System.String,System.String)">
+            <summary>构造函数</summary>
+            <param name="ip">Ip</param>
+            <param name="user">用户名</param>
+            <param name="psw">密码</param>
+        </member>
+        <member name="P:CC.ORM.Utility.ServerInfo.Ip">
+            <summary>Ip地址</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.ServerInfo.User">
+            <summary>用户名</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.ServerInfo.Psw">
+            <summary>密码</summary>
+        </member>
+        <member name="T:CC.ORM.Utility.TableInfo.ColumnDetails">
+            <summary>字段的详细信息</summary>
+        </member>
+        <member name="F:CC.ORM.Utility.TableInfo.ColumnDetails._propertyInfo">
+            <summary>属性访问</summary>
+        </member>
+        <member name="F:CC.ORM.Utility.TableInfo.ColumnDetails._isPrimary">
+            <summary>是否是主键</summary>
+        </member>
+        <member name="F:CC.ORM.Utility.TableInfo.ColumnDetails._isIdentity">
+            <summary>是否自增长</summary>
+        </member>
+        <member name="F:CC.ORM.Utility.TableInfo.ColumnDetails._fieldname">
+            <summary>数据库内字段的名称</summary>
+        </member>
+        <member name="M:CC.ORM.Utility.TableInfo.ColumnDetails.#ctor(System.Reflection.PropertyInfo,System.Reflection.PropertyInfo,System.Boolean,System.Boolean,System.String)">
+            <summary>构造函数</summary>
+            <param name="propertyinfo"></param>
+            <param name="enablefieldInfo"></param>
+            <param name="isprimary"></param>
+            <param name="isdentity"></param>
+            <param name="fieldname"></param>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ColumnDetails.PropertyInfo">
+            <summary>属性访问</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ColumnDetails.IsPrimary">
+            <summary>是否是主键</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ColumnDetails.IsIdentity">
+            <summary>是否自增长</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ColumnDetails.Fieldname">
+            <summary>数据库内字段的名称</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ColumnDetails.EnablefieldInfo">
+            <summary>标识是否插入数据库的字段</summary>
+        </member>
+        <member name="T:CC.ORM.Utility.TableInfo.ICommandData">
+            <summary>命令数据接口</summary>
+        </member>
+        <member name="M:CC.ORM.Utility.TableInfo.ICommandData.GetUpdateCmdEx(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>获取更新cmd命令</summary>
+            <param name="columns">字段</param>
+            <param name="pkColumns">主键字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.ORM.Utility.TableInfo.ICommandData.GetInsertCmdEx(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>获取插入cmd命令</summary>
+            <param name="columns">字段</param>
+            <param name="pkColumns">主键字段</param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ICommandData.InsertCmd">
+            <summary>插入命令</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ICommandData.SelectByIdCmd">
+            <summary>查询命令</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ICommandData.UpdateCmd">
+            <summary>更新命令</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ICommandData.DeleteCmd">
+            <summary>删除命令</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ICommandData.SelectAllCmd">
+            <summary>选择全部命令</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ICommandData.SelectCountCmd">
+            <summary>查询数量命令</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.ICommandData.TableDetail">
+            <summary>表的详细信息</summary>
+        </member>
+        <member name="T:CC.ORM.SqlDataBase">
+            <summary>数据库映射类基类,实现根据主键比对方法和数据更新</summary>
+        </member>
+        <member name="M:CC.ORM.SqlDataBase.GetHashCode">
+            <summary>得到当前对象的HashCode值</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.ORM.SqlDataBase.Equals(System.Object)">
+            <summary>根据主键判断当前对象的主键是否与obj相同</summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.ORM.SqlDataBase.UpdateMerge(CC.ORM.SqlDataBase)">
+            <summary>将data的可用的非主键数据更新到当前实例,ORM类版本需要100以上</summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:CC.ORM.SqlDataBase.CheckPkColumns">
+            <summary>检查是否主键数据都存在</summary>
+            <returns></returns>
+        </member>
+        <member name="F:CC.ORM.SqlDataBase.bIsChanged">
+            <summary>是否修改</summary>
+        </member>
+        <member name="T:CC.ORM.Utility.TableInfo.TableDetails">
+            <summary>表的详细信息</summary>
+        </member>
+        <member name="F:CC.ORM.Utility.TableInfo.TableDetails._databasename">
+            <summary>映射为数据库的名称</summary>
+        </member>
+        <member name="M:CC.ORM.Utility.TableInfo.TableDetails.#ctor(System.String,System.String,System.Int32,CC.ORM.Utility.TableInfo.ColumnDetails[],CC.ORM.Utility.TableInfo.ColumnDetails[])">
+            <summary>构造函数</summary>
+            <param name="tablename"></param>
+            <param name="database"></param>
+            <param name="version"></param>
+            <param name="cols"></param>
+            <param name="pkcols"></param>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.TableDetails.TableName">
+            <summary>表的名称</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.TableDetails.DatabaseName">
+            <summary>映射为数据库的名称</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.TableDetails.Columns">
+            <summary>非主键字段</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.TableDetails.PkColumns">
+            <summary>主键字段</summary>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.TableDetails.Version">
+            <summary>版本信息</summary>
+        </member>
+        <member name="T:CC.ORM.Utility.TableInfo.TableFactory">
+            <summary>类型到表之间的转化与缓存工厂</summary>
+        </member>
+        <member name="M:CC.ORM.Utility.TableInfo.TableFactory.GetTableCommandData(System.Type,CC.ORM.IDataFactory)">
+            <summary>得到表的详细命令数据</summary>
+        </member>
+        <member name="M:CC.ORM.Utility.TableInfo.TableFactory.GetTableDetails(System.Type)">
+            <summary>得到表的详细数据</summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.ORM.Utility.TableInfo.TableFactory.Instance">
+            <summary>全局唯一实例对象</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1062 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CCFun.Web</name>
+    </assembly>
+    <members>
+        <member name="T:CC.Web.Http.IHttpAble">
+            <summary>HTTP获取网站数据的接口</summary>
+        </member>
+        <member name="M:CC.Web.Http.IHttpAble.Get(System.String)">
+            <summary>GET方式得到网页源代码</summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.IHttpAble.Post(System.String,System.String)">
+            <summary>POST方式得到网页源代码</summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.IHttpAble.GetHtml(CC.Web.Http.HttpItem,CC.Web.Http.HttpHeadInfo)">
+            <summary>得到网页源代码</summary>
+            <param name="item"></param>
+            <param name="headInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.IHttpAble.GetHtml(CC.Web.Http.HttpItem)">
+            <summary>得到网页源代码</summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Web.Http.IHttpAble.DefaultHeadInfo">
+            <summary>默认头信息</summary>
+        </member>
+        <member name="T:CC.Web.Http.Proxy.AutoProxyHelper">
+            <summary>自动更换代理的http帮助类</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.AutoProxyHelper.#ctor(CC.Web.Http.HttpHelper,CC.Web.Http.Proxy.AutoProxySetting)">
+            <summary>自动更换代理的http帮助类</summary>
+            <param name="http"></param>
+            <param name="proxySetting"></param>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.AutoProxyHelper.#ctor">
+            <summary>自动更换代理的http帮助类</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.AutoProxyHelper.GetHtml(CC.Web.Http.HttpItem)">
+            <summary>得到网页</summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.AutoProxyHelper.ChangeProxy">
+            <summary>手动更换代理</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.AutoProxyHelper.Get(System.String)">
+            <summary>得到网页</summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.AutoProxyHelper.Post(System.String,System.String)">
+            <summary>POST方式得到网页</summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.AutoProxyHelper.GetHtml(CC.Web.Http.HttpItem,CC.Web.Http.HttpHeadInfo)">
+            <summary>得到网页</summary>
+            <param name="item"></param>
+            <param name="headInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Web.Http.Proxy.AutoProxyHelper.ProxySetting">
+            <summary>代理设置</summary>
+        </member>
+        <member name="P:CC.Web.Http.Proxy.AutoProxyHelper.DefaultHeadInfo">
+            <summary>默认头信息</summary>
+        </member>
+        <member name="T:CC.Web.Http.CertificateInfo">
+            <summary>证书</summary>
+        </member>
+        <member name="M:CC.Web.Http.CertificateInfo.SetSecurityProtocol(System.Net.SecurityProtocolType)">
+            <summary>设置连接协议</summary>
+            <param name="spt">ssl4 = (SecurityProtocolType)3072</param>
+        </member>
+        <member name="M:CC.Web.Http.CertificateInfo.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            回调验证证书问题
+            </summary>
+            <param name="sender">流对象</param>
+            <param name="certificate">证书</param>
+            <param name="chain">X509Chain</param>
+            <param name="errors">SslPolicyErrors</param>
+            <returns>bool</returns>
+        </member>
+        <member name="F:CC.Web.Http.CertificateInfo.clent_certificates">
+            <summary>509证书集合</summary>
+        </member>
+        <member name="M:CC.Web.Http.CertificateInfo.AddCer(System.String)">
+            <summary>添加证书</summary>
+            <param name="cer_path">证书的绝对路径</param>
+        </member>
+        <member name="T:CC.Web.Http.HttpHeadInfo">
+            <summary>http头信息</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.timeout">
+            <summary>请求超时时间,默认为2000</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.read_write_timeout">
+            <summary>获取或设置写入或读取流时的超时,默认为5000</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.host">
+            <summary>Host的标头信息</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.keep_alive">
+            <summary>获取或设置一个值，该值指示是否与 Internet 资源建立持久性连接默认为true。</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.accept">
+            <summary>请求标头值 默认为text/html, application/xhtml+xml, */*</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.content_type">
+            <summary>请求返回类型默认 text/html</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.user_agent">
+            <summary>客户端访问信息默认Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.encoding">
+            <summary>返回数据编码默认为NUll,可以自动识别,一般为utf-8,gbk,gb2312</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.cookie_collection">
+            <summary>Cookie对象集合</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.proxy">
+            <summary>设置http代理对象</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.is_to_lower">
+            <summary>是否设置为全文小写，默认为不转化</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.allow_auto_redirect">
+            <summary>支持跳转页面，查询结果将是跳转后的页面，默认是不跳转</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.connection_limit">
+            <summary>最大连接数,默认为1024</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.result_type">
+            <summary>设置返回类型String和Byte,默认为string</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.header">
+            <summary>header对象</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.protocol_version">
+            <summary>获取或设置用于请求的 HTTP 版本。返回结果:用于请求的 HTTP 版本。默认为 System.Net.HttpVersion.Version11</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.expect_100_continue">
+            <summary>获取或设置一个 System.Boolean 值，该值确定是否使用 100-Continue 行为。如果 POST 请求需要 100-Continue 响应，则为 true；否则为 false。默认值为 true</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.client_certificates">
+            <summary>设置509证书集合</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.icredentials">
+            <summary>获取或设置请求的身份验证信息。默认为DefaultCredentials</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.maximun_automatic_redirections">
+            <summary>设置请求将跟随的重定向的最大数目</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.if_modified_since">
+            <summary>获取和设置IfModifiedSince，默认为当前日期和时间</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpHeadInfo.ip_endpoint">
+            <summary>设置本地的出口ip和端口</summary>
+        </member>
+        <member name="T:CC.Web.Http.HttpHelper">
+            <summary>http类</summary>
+        </member>
+        <member name="M:CC.Web.Http.HttpHelper.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.Web.Http.HttpHelper.#ctor(CC.Web.Http.HttpHeadInfo)">
+            <summary>构造函数</summary>
+            <param name="headInfo"></param>
+        </member>
+        <member name="M:CC.Web.Http.HttpHelper.GetHtml(CC.Web.Http.HttpItem)">
+            <summary>根据相传入的数据，得到相应页面数据</summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:CC.Web.Http.HttpHelper.GetHtml(CC.Web.Http.HttpItem,CC.Web.Http.HttpHeadInfo)">
+            <summary>根据相传入的数据，得到相应页面数据</summary>
+            <param name="item"></param>
+            <param name="headInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.HttpHelper.Get(System.String)">
+            <summary>得到网页</summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.HttpHelper.Post(System.String,System.String)">
+            <summary>POST方式得到网页</summary>
+            <param name="url"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.HttpHelper.HtmlDiscode(System.String)">
+            <summary>
+            恢复html中的特殊字符
+            </summary>
+            <param name="theString">需要恢复的文本。</param>
+            <returns>恢复好的文本。</returns>
+        </member>
+        <member name="P:CC.Web.Http.HttpHelper.DefaultHttp">
+            <summary>默认实例</summary>
+        </member>
+        <member name="P:CC.Web.Http.HttpHelper.DefaultHeadInfo">
+            <summary>默认头信息</summary>
+        </member>
+        <member name="T:CC.Web.Http.HttpItem">
+            <summary>http提交信息</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpItem.url">
+            <summary>网址</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpItem.method">
+            <summary>提交模式</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpItem.post_data_type">
+            <summary>post方式</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpItem.post_data_string">
+            <summary>post的数据</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpItem.post_data_bytes">
+            <summary>post的数据</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpItem.post_encoding">
+            <summary>提交的编码格式</summary>
+        </member>
+        <member name="F:CC.Web.Http.HttpItem.referer">
+            <summary>来源地址，上次访问地址</summary>
+        </member>
+        <member name="M:CC.Web.Http.HttpItem.SetHttpWebRequest(System.Net.HttpWebRequest)">
+            <summary>设置webRequest</summary>
+            <param name="request"></param>
+        </member>
+        <member name="T:CC.Web.Http.HttpResult">
+            <summary>Http返回参数类</summary>
+        </member>
+        <member name="P:CC.Web.Http.HttpResult.Html">
+            <summary>返回的String类型数据 只有ResultType.String时才返回数据，其它情况为空</summary>
+        </member>
+        <member name="P:CC.Web.Http.HttpResult.ResultByte">
+            <summary>返回的Byte数组 只有ResultType.Byte时才返回数据，其它情况为空</summary>
+        </member>
+        <member name="P:CC.Web.Http.HttpResult.Header">
+            <summary>header对象</summary>
+        </member>
+        <member name="P:CC.Web.Http.HttpResult.StatusDescription">
+            <summary>返回状态说明</summary>
+        </member>
+        <member name="P:CC.Web.Http.HttpResult.StatusCode">
+            <summary>返回状态码,默认为OK</summary>
+        </member>
+        <member name="P:CC.Web.Http.HttpResult.ResponseUri">
+            <summary>最后访问的URl</summary>
+        </member>
+        <member name="P:CC.Web.Http.HttpResult.RedirectUrl">
+            <summary>获取重定向的URl</summary>
+        </member>
+        <member name="T:CC.Web.Http.HttpResultHelper">
+            <summary>获取数据并解析的方法</summary>
+        </member>
+        <member name="M:CC.Web.Http.HttpResultHelper.GetData(System.Net.HttpWebResponse,CC.Web.Http.HttpHeadInfo)">
+            <summary>获取数据并解析的方法</summary>
+            <param name="response"></param>
+            <param name="headInfo"></param>
+        </member>
+        <member name="M:CC.Web.Http.HttpResultHelper.GetByte(System.Net.HttpWebResponse)">
+            <summary>提取网页Byte</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Http.HttpResultHelper.GetEncoding(CC.Web.Http.HttpHeadInfo,System.Net.HttpWebResponse,System.Byte[])">
+            <summary>设置编码</summary>
+            <param name="headInfo">HttpItem</param>
+            <param name="response">HttpResult</param>
+            <param name="ResponseByte">byte[]</param>
+        </member>
+        <member name="T:CC.Web.Http.IPEndPointInfo">
+            <summary>ip终结点</summary>
+        </member>
+        <member name="M:CC.Web.Http.IPEndPointInfo.#ctor(System.Net.IPEndPoint)">
+            <summary>构造函数</summary>
+            <param name="endpoint"></param>
+        </member>
+        <member name="F:CC.Web.Http.IPEndPointInfo.ip_endpoint">
+            <summary>设置本地的出口ip和端口</summary>
+        </member>
+        <member name="M:CC.Web.Http.IPEndPointInfo.BindIPEndPointCallback(System.Net.ServicePoint,System.Net.IPEndPoint,System.Int32)">
+            <summary>
+            通过设置这个属性，可以在发出连接的时候绑定客户端发出连接所使用的IP地址。 
+            </summary>
+            <param name="servicePoint"></param>
+            <param name="remoteEndPoint"></param>
+            <param name="retryCount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Web.Http.MethodType">
+            <summary>HTTP提交类型</summary>
+        </member>
+        <member name="F:CC.Web.Http.MethodType.GET">
+            <summary>GET</summary>
+        </member>
+        <member name="F:CC.Web.Http.MethodType.POST">
+            <summary>POST</summary>
+        </member>
+        <member name="T:CC.Web.Http.PostDataType">
+            <summary>Post的数据格式默认为string</summary>
+        </member>
+        <member name="F:CC.Web.Http.PostDataType.String">
+            <summary>
+            字符串类型，这时编码Encoding可不设置
+            </summary>
+        </member>
+        <member name="F:CC.Web.Http.PostDataType.Byte">
+            <summary>
+            Byte类型，需要设置PostdataByte参数的值编码Encoding可设置为空
+            </summary>
+        </member>
+        <member name="F:CC.Web.Http.PostDataType.FilePath">
+            <summary>
+            传文件，Postdata必须设置为文件的绝对路径，必须设置Encoding的值
+            </summary>
+        </member>
+        <member name="T:CC.Web.Http.ProxyInfo">
+            <summary>http代理</summary>
+        </member>
+        <member name="M:CC.Web.Http.ProxyInfo.SetProxy(System.String,System.String,System.String)">
+            <summary>设置http代理</summary>
+            <param name="ip">代理地址</param>
+            <param name="user">用户名</param>
+            <param name="psw">密码</param>
+        </member>
+        <member name="P:CC.Web.Http.ProxyInfo.Proxy">
+            <summary>http代理</summary>
+        </member>
+        <member name="T:CC.Web.Http.ResultCookieType">
+            <summary>Cookie返回类型</summary>
+        </member>
+        <member name="F:CC.Web.Http.ResultCookieType.String">
+            <summary>
+            只返回字符串类型的Cookie
+            </summary>
+        </member>
+        <member name="F:CC.Web.Http.ResultCookieType.CookieCollection">
+            <summary>
+            CookieCollection格式的Cookie集合同时也返回String类型的cookie
+            </summary>
+        </member>
+        <member name="T:CC.Web.Http.ResultType">
+            <summary>返回类型</summary>
+        </member>
+        <member name="F:CC.Web.Http.ResultType.String">
+            <summary>
+            表示只返回字符串 只有Html有数据
+            </summary>
+        </member>
+        <member name="F:CC.Web.Http.ResultType.Byte">
+            <summary>
+            表示返回字符串和字节流 ResultByte和Html都有数据返回
+            </summary>
+        </member>
+        <member name="T:CC.Web.Http.Proxy.IGetProxyAble">
+            <summary>代理获取接口</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.IGetProxyAble.GetProxy">
+            <summary>得到代理</summary>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Web.Http.Proxy.ProxyHelper">
+            <summary>代理相关</summary>
+        </member>
+        <member name="F:CC.Web.Http.Proxy.ProxyHelper.m_GetProxyHttp">
+            <summary>获取代理的httpHelper对象</summary>
+        </member>
+        <member name="F:CC.Web.Http.Proxy.ProxyHelper.ProxyFun">
+            <summary>代理获取函数</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.ProxyHelper.GetIp">
+            <summary>得到代理IP</summary>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Web.Http.Proxy.ProxyHelper.Instance">
+            <summary>实例</summary>
+        </member>
+        <member name="T:CC.Web.Http.Proxy.AutoProxySetting">
+            <summary>自动获取代理相关配置信息</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.AutoProxySetting.#ctor">
+            <summary>默认构造函数</summary>
+        </member>
+        <member name="P:CC.Web.Http.Proxy.AutoProxySetting.RetryTimes">
+            <summary>获取http错误后重试次数,&lt;=0为出错不重试,默认为2</summary>
+        </member>
+        <member name="P:CC.Web.Http.Proxy.AutoProxySetting.RetryDelay">
+            <summary>获取http时错误重试间隔,默认为1000</summary>
+        </member>
+        <member name="T:CC.Web.Http.Proxy.Proxy_66ip">
+            <summary>免费代理</summary>
+        </member>
+        <member name="F:CC.Web.Http.Proxy.Proxy_66ip.m_GetProxyHttp">
+            <summary>获取代理的httpHelper对象</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.Proxy_66ip.#ctor(System.Int32)">
+            <summary>构造函数</summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.Proxy_66ip.GetProxy">
+            <summary>得到代理</summary>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Web.Http.Proxy.Proxy_cc">
+            <summary>代理-CC</summary>
+        </member>
+        <member name="F:CC.Web.Http.Proxy.Proxy_cc.m_GetProxyHttp">
+            <summary>获取代理的httpHelper对象</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.Proxy_cc.#ctor(System.String,System.String)">
+            <summary>构造函数</summary>
+            <param name="user"></param>
+            <param name="psw"></param>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.Proxy_cc.GetProxy">
+            <summary>得到代理</summary>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Web.Http.Proxy.Proxy_qwt">
+            <summary>全网代理-付费</summary>
+        </member>
+        <member name="F:CC.Web.Http.Proxy.Proxy_qwt.m_GetProxyHttp">
+            <summary>获取代理的httpHelper对象</summary>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.Proxy_qwt.#ctor(System.String,System.Int32)">
+            <summary>构造函数</summary>
+            <param name="order"></param>
+            <param name="num"></param>
+        </member>
+        <member name="M:CC.Web.Http.Proxy.Proxy_qwt.GetProxy">
+            <summary>得到代理</summary>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Web.old.AutoProxyHelper">
+            <summary>自动更换代理的http帮助类</summary>
+        </member>
+        <member name="T:CC.Web.old.HttpHelper_Old">
+            <summary>网页获取</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHelper_Old.RetryTimes">
+            <summary>获取http时错误重试次数，0为出错不重试，&lt;0是为一直循环获取,默认为3</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHelper_Old.RetryDelay">
+            <summary>获取http时错误重试间隔,默认为1000</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHelper_Old.bHttpErrorThrow">
+            <summary>出错是否抛出异常</summary>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.#ctor">
+            <summary>构造函数,使用默认的头信息</summary>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.#ctor(CC.Web.old.HttpHeader)">
+            <summary>构造函数,使用指定的头信息</summary>
+            <param name="defHeader"></param>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.CreateHttpResponse(CC.Web.old.HttpHelper_Old.HttpType,System.String,CC.Web.old.HttpHeader,System.String)">
+            <summary>创建Get或Post方法的httpResponse对象</summary>
+            <param name="httpType">Get或Post方法</param>
+            <param name="url">网站Url</param>
+            <param name="parameters">Post的数据</param>
+            <param name="header">httpResponse的头信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>为SSL/TLS安全通道建立信任关系</summary>
+            <param name="sender"></param>
+            <param name="certificate"></param>
+            <param name="chain"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.DealResponse(System.Net.HttpWebResponse,System.Text.Encoding)">
+            <summary>得到html源代码,通过GetStr方法</summary>
+            <param name="response"></param>
+            <param name="ResponseEncoding"></param>
+            <returns>如果为空，返回null</returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.GetStr(System.Net.HttpWebResponse,System.Text.Encoding)">
+            <summary>得到html源代码</summary>
+            <param name="res"></param>
+            <param name="ResponseEncoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.CopyCookie(CC.Web.old.HttpHelper_Old)">
+            <summary>从另一个对象处共享cookie信息</summary>
+            <param name="http"></param>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.SaveCookie(System.String)">
+            <summary>保存cookie信息到文件</summary>
+            <param name="FilePath"></param>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.LoadCookie(System.String)">
+            <summary>从文件加载Cookie信息</summary>
+            <param name="FilePath"></param>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.AddCookie(System.String,System.String,System.String)">
+            <summary>自定义添加Cookie信息</summary>
+            <param name="url"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.AddCookies(System.String,System.String)">
+            <summary>自定义添加Cookie信息,格式：k1=v1;k2=v2</summary>
+            <param name="url"></param>
+            <param name="cookiestr"></param>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.Get(System.String,CC.Web.old.HttpHeader)">
+            <summary>Get模式得到http源代码</summary>
+            <param name="url"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.Post(System.String,System.String,CC.Web.old.HttpHeader)">
+            <summary>Post模式得到Http源码</summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.DownloadFile(System.String,System.String,CC.Web.old.HttpHeader)">
+            <summary>下载文件</summary>
+            <param name="url"></param>
+            <param name="filename"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.ConvertExtendedASCII(System.String)">
+            <summary>将html中大于127的字符转换为&amp;#XXX;的格式</summary>
+            <param name="HTML"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.Download(System.String,System.String,CC.Web.old.HttpHeader)">
+            <summary>下载文件</summary>
+            <param name="url"></param>
+            <param name="filename"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.SetDefaultConnectionLimit(System.Int32)">
+            <summary>设置最大并发连接数</summary>
+            <param name="i"></param>
+        </member>
+        <member name="M:CC.Web.old.HttpHelper_Old.CheckUrl(System.String@)">
+            <summary>url自动补全http://</summary>
+            <param name="url"></param>
+        </member>
+        <member name="P:CC.Web.old.HttpHelper_Old.DefaultHeader">
+            <summary>默认的头信息</summary>
+        </member>
+        <member name="P:CC.Web.old.HttpHelper_Old.cookieContainer">
+            <summary>储存cookie</summary>
+        </member>
+        <member name="T:CC.Web.old.HttpHelper_Old.HttpType">
+            <summary>http请求类型</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHelper_Old.HttpType.GET">
+            <summary>GET</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHelper_Old.HttpType.POST">
+            <summary>POST</summary>
+        </member>
+        <member name="M:CC.Web.old.AutoProxyHelper.#ctor(CC.Web.old.AutoProxySetting,CC.Web.old.HttpHeader)">
+            <summary></summary>
+            <param name="proxySetting">代理设置的信息,不能为null</param>
+            <param name="defHeader">网页获取的头信息,null为默认值</param>
+        </member>
+        <member name="M:CC.Web.old.AutoProxyHelper.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:CC.Web.old.AutoProxyHelper.Get(System.String,CC.Web.old.HttpHeader)">
+            <summary>使用代理Get模式得到http源代码,失败会自动更换代理</summary>
+            <param name="url"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.AutoProxyHelper.Post(System.String,System.String,CC.Web.old.HttpHeader)">
+            <summary>Post模式得到Http源码,失败会自动更换代理</summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.AutoProxyHelper.ChangeProxy(CC.Web.old.HttpHeader)">
+            <summary>手动更换代理</summary>
+        </member>
+        <member name="P:CC.Web.old.AutoProxyHelper.ProxySetting">
+            <summary>代理设置</summary>
+        </member>
+        <member name="T:CC.Web.old.AutoProxySetting">
+            <summary>自动获取代理相关配置信息</summary>
+        </member>
+        <member name="M:CC.Web.old.AutoProxySetting.#ctor">
+            <summary>默认构造函数</summary>
+        </member>
+        <member name="P:CC.Web.old.AutoProxySetting.RetryTimes">
+            <summary>获取http时错误重试次数，0为出错不重试，&lt;0是为一直循环获取,默认为0</summary>
+        </member>
+        <member name="P:CC.Web.old.AutoProxySetting.RetryDelay">
+            <summary>获取http时错误重试间隔,默认为1000</summary>
+        </member>
+        <member name="T:CC.Web.Ftp.FtpFileDetailFactory">
+            <summary>ftp文件详细信息构造工厂</summary>
+        </member>
+        <member name="F:CC.Web.Ftp.FtpFileDetailFactory.TimeReg">
+            <summary>文件详细信息正则</summary>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpFileDetailFactory.GetFileDetail(System.String,System.DateTime,System.Int32)">
+            <summary>构造文件详细信息</summary>
+            <param name="fileName"></param>
+            <param name="ModifiedTime"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpFileDetailFactory.GetFileDetailFromFtpString(System.String)">
+            <summary>解析ftp服务器上的文件详细信息</summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpFileDetailFactory.GetModifiedTime(System.String)">
+            <summary>解析修改日期</summary>
+            <param name="timestr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Web.Ftp.FtpFileDetail">
+            <summary>ftp文件详细信息</summary>
+        </member>
+        <member name="F:CC.Web.Ftp.FtpFileDetail.ModifiedTime">
+            <summary>修改时间</summary>
+        </member>
+        <member name="F:CC.Web.Ftp.FtpFileDetail.Size">
+            <summary>文件大小</summary>
+        </member>
+        <member name="F:CC.Web.Ftp.FtpFileDetail.Name">
+            <summary>文件名称</summary>
+        </member>
+        <member name="T:CC.Web.Ftp.FtpHelper">
+            <summary>
+            封装了FTP的两个操作：下载文件Download()和获取FTP服务器上文件列表信息GetFileList()
+            </summary>
+        </member>
+        <member name="F:CC.Web.Ftp.FtpHelper.ftpServerIP">
+            <summary>ftpIP</summary>
+        </member>
+        <member name="F:CC.Web.Ftp.FtpHelper.ftpUser">
+            <summary>ftp用户名</summary>
+        </member>
+        <member name="F:CC.Web.Ftp.FtpHelper.ftpPwd">
+            <summary>ftp密码</summary>
+        </member>
+        <member name="F:CC.Web.Ftp.FtpHelper.ftpPath">
+            <summary>ftp地址</summary>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpHelper.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>构造函数</summary>
+            <param name="ip">ftpIP</param>
+            <param name="user">ftp用户名</param>
+            <param name="pwd">ftp密码</param>
+            <param name="path">ftp地址</param>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpHelper.GetFileList">
+            <summary>
+            获取ftp服务器上的文件信息
+            </summary>
+            <returns>存储了所有文件信息的字符串数组</returns>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpHelper.GetFileListDetail">
+            <summary>获取ftp服务器上的文件详细信息</summary>
+            <returns>存储了所有文件信息的字符串数组</returns>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpHelper.GetFileLastUpdateTime(System.String)">
+            <summary>获取文件最后更新时间</summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpHelper.GetFileSize(System.String)">
+            <summary>
+            获取FTP上指定文件的大小
+            </summary>
+            <param name="filename">文件名</param>
+            <returns>文件大小</returns>
+        </member>
+        <member name="M:CC.Web.Ftp.FtpHelper.Download(System.String,System.String)">
+            <summary>
+            实现ftp下载操作
+            </summary>
+            <param name="filePath">保存到本地的文件名</param>
+            <param name="fileName">远程文件名</param>
+        </member>
+        <member name="T:CC.Web.old.HttpHeader">
+            <summary>网页头信息,NULL为不添加,String.Empty为默认值</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.Referer">
+            <summary>Referer信息,默认当前url</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.AcceptEncoding">
+            <summary>AcceptEncoding信息,默认为Accept-Encoding: gzip, deflate</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.UserAgent">
+            <summary>UserAgent信息，默认为CC</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.Accept">
+            <summary>Accept信息，默认为*/*</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.ContentType">
+            <summary>ContentType信息，默认为application/x-www-form-urlencoded</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.Host">
+            <summary>Host标头值</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.TimeOut">
+            <summary>HTTP请求的TimeOut，默认5000</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.ReadWriteTimeout">
+            <summary>读写流的TimeOut,默认5000</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.CookieContainer">
+            <summary>Cookie</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.Proxy">
+            <summary>代理</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.Others">
+            <summary>其他头信息</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.PostData_Encoding">
+            <summary>Post提交的数据的字符编码,默认为UTF-8</summary>
+        </member>
+        <member name="F:CC.Web.old.HttpHeader.ResponseEncoding">
+            <summary>解析网站数据的字符编码,null为自动识别</summary>
+        </member>
+        <member name="M:CC.Web.old.HttpHeader.GetDefaultHeader">
+            <summary>获取默认的头信息</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHeader.Copy">
+            <summary>拷贝</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.old.HttpHeader.#ctor">
+            <summary></summary>
+        </member>
+        <member name="T:CC.Web.old.HttpWebRequestFactory">
+            <summary>WebRequest构造工厂</summary>
+        </member>
+        <member name="M:CC.Web.old.HttpWebRequestFactory.Create(System.String,CC.Web.old.HttpHeader)">
+            <summary>创建一个HttpWebRequest对象</summary>
+            <param name="url"></param>
+            <param name="header"></param>
+            <returns></returns>
+        </member>
+        <member name="F:CC.Web.HttpServer.listerner">
+            <summary>http侦听对象</summary>
+        </member>
+        <member name="F:CC.Web.HttpServer.m_url">
+            <summary>侦听地址</summary>
+        </member>
+        <member name="F:CC.Web.HttpServer.m_AddTip">
+            <summary>tip的输出函数</summary>
+        </member>
+        <member name="M:CC.Web.HttpServer.#ctor(System.String,System.Action{System.String})">
+            <summary>构造函数</summary>
+            <param name="url">http地址，默认为http://127.0.0.1:32145/</param>
+            <param name="addTip">tip的输出函数</param>
+        </member>
+        <member name="F:CC.Web.HttpServer.count">
+            <summary>当前连接数</summary>
+        </member>
+        <member name="M:CC.Web.HttpServer.Start">
+            <summary>在当前线程开启http服务，会占用当前线程</summary>
+        </member>
+        <member name="M:CC.Web.HttpServer.Stop">
+            <summary>停止http服务</summary>
+        </member>
+        <member name="M:CC.Web.HttpServer.GetResult(System.Net.HttpListenerRequest)">
+            <summary>http处理函数</summary>
+            <param name="request">http请求</param>
+            <returns></returns>
+        </member>
+        <member name="T:CC.Web.Mail.MailHelper">
+            <summary>发送邮件相关</summary>
+        </member>
+        <member name="M:CC.Web.Mail.MailHelper.#ctor(System.String,System.String,CC.Web.Mail.MailType)">
+            <summary>构造函数</summary>
+            <param name="user"></param>
+            <param name="psw"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:CC.Web.Mail.MailHelper.SendMail(System.String,System.String,System.String)">
+            <summary>发送邮件</summary>
+            <param name="ToMail"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+        </member>
+        <member name="M:CC.Web.Mail.MailHelper.SendMail(System.Net.Mail.MailMessage)">
+            <summary>发送邮件</summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:CC.Web.Mail.MailHelper.GetMessage(System.String,System.String,System.String)">
+            <summary>构建message对象</summary>
+            <param name="ToMail"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CC.Web.Mail.MailHelper.FromMailAddress">
+            <summary>发送方邮箱</summary>
+        </member>
+        <member name="P:CC.Web.Mail.MailHelper.FromDisplayName">
+            <summary>发送方名称</summary>
+        </member>
+        <member name="T:CC.Web.Mail.MailType">
+            <summary>邮箱类型</summary>
+        </member>
+        <member name="F:CC.Web.Mail.MailType.M163">
+            <summary>163邮箱</summary>
+        </member>
+        <member name="F:CC.Web.Mail.MailType.Gmail">
+            <summary>gmail</summary>
+        </member>
+        <member name="F:CC.Web.old.ProxyHelper.m_GetProxyHttp">
+            <summary>获取代理的httpHelper对象</summary>
+        </member>
+        <member name="T:CC.MySocket.SocketHelper">
+            <summary>socket发送，接收数据类</summary>
+        </member>
+        <member name="F:CC.MySocket.SocketHelper.m_socket">
+            <summary>Socket对象</summary>
+        </member>
+        <member name="M:CC.MySocket.SocketHelper.#ctor">
+            <summary>创建一个新的socket</summary>
+        </member>
+        <member name="M:CC.MySocket.SocketHelper.#ctor(System.Net.Sockets.Socket)">
+            <summary>构造函数</summary>
+            <param name="socket">socket对象</param>
+        </member>
+        <member name="M:CC.MySocket.SocketHelper.SetTimeout(System.Int32)">
+            <summary>设置接收和发送等待时间</summary>
+            <param name="timeout">接收和发送等待时间</param>
+        </member>
+        <member name="M:CC.MySocket.SocketHelper.Send(System.Byte[])">
+            <summary>发送数据，数据头为5位，1位标志位（1）+4位数据长度</summary>
+            <param name="sendBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MySocket.SocketHelper.Receive">
+            <summary>接收数据</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.MySocket.SocketHelper.Close">
+            <summary>关闭连接</summary>
+        </member>
+        <member name="P:CC.MySocket.SocketHelper.RemoteEndPoint">
+            <summary>获取远程终结点</summary>
+        </member>
+        <member name="T:CC.MySocket.SocketServer">
+            <summary>socket服务器端</summary>
+        </member>
+        <member name="M:CC.MySocket.SocketServer.Bind(System.String,System.Int32)">
+            <summary>使 System.Net.Sockets.Socket 与一个本地终结点相关联</summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:CC.MySocket.SocketServer.Listen(System.Int32)">
+            <summary>将 System.Net.Sockets.Socket 置于侦听状态。</summary>
+            <param name="backlog">挂起连接队列的最大长度。</param>
+        </member>
+        <member name="M:CC.MySocket.SocketServer.Accept">
+            <summary>为新建连接创建新的SocketHelper</summary>
+            <returns></returns>
+        </member>
+        <member name="T:CC.MySocket.SocketClient">
+            <summary>socket客户端</summary>
+        </member>
+        <member name="M:CC.MySocket.SocketClient.Connect(System.String,System.Int32)">
+            <summary>建立与远程主机的连接。</summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+        </member>
+        <member name="T:CC.Web.Sockets.Async.ICloseEventAble">
+            <summary>关闭接口</summary>
+        </member>
+        <member name="E:CC.Web.Sockets.Async.ICloseEventAble.OnClosing">
+            <summary>关闭</summary>
+        </member>
+        <member name="T:CC.Web.Sockets.Async.SocketAsyncCallBack">
+            <summary>异步socket</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncCallBack.#ctor">
+            <summary>构造函数</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncCallBack.SendAsync(System.Net.Sockets.Socket)">
+            <summary>异步发送</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncCallBack.RecvAsync(System.Net.Sockets.Socket)">
+            <summary>异步接收</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncCallBack.ProcessSend(System.Net.Sockets.Socket)">
+            <summary>处理发送完成</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncCallBack.ProcessReceive(System.Net.Sockets.Socket)">
+            <summary>处理接收完成</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncCallBack.ProcessClose(System.Net.Sockets.Socket)">
+            <summary>处理关闭</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="E:CC.Web.Sockets.Async.SocketAsyncCallBack.OnClosing">
+            <summary>关闭</summary>
+        </member>
+        <member name="T:CC.Web.Sockets.Async.SocketAsyncPackage">
+            <summary>异步包</summary>
+        </member>
+        <member name="F:CC.Web.Sockets.Async.SocketAsyncPackage.m_package">
+            <summary>包数据</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncPackage.#ctor">
+            <summary>异步包</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncPackage.Finalize">
+            <summary>异步包</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncPackage.RecvAsync(System.Net.Sockets.Socket)">
+            <summary>异步接收</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncPackage.SendAsync(System.Net.Sockets.Socket,CC.Utility.Package.PackageDataInfo)">
+            <summary>异步发送</summary>
+            <param name="socket"></param>
+            /// <param name="package"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncPackage.PackageReceived(System.Net.Sockets.Socket)">
+            <summary>处理接收完成</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncPackage.PackageSended(System.Net.Sockets.Socket)">
+            <summary>处理发送完成</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.SocketAsyncPackage.ProcessClose(System.Net.Sockets.Socket)">
+            <summary>处理关闭</summary>
+            <param name="socket"></param>
+        </member>
+        <member name="E:CC.Web.Sockets.Async.SocketAsyncPackage.OnClosing">
+            <summary>关闭</summary>
+        </member>
+        <member name="T:CC.Web.Sockets.Async.TcpServerAsync`1">
+            <summary>异步服务器</summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.TcpServerAsync`1.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.TcpServerAsync`1.Init(System.Int32)">
+            <summary>初始化</summary>
+            <param name="numConnections"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.TcpServerAsync`1.Start(System.String,System.Int32)">
+            <summary>打开服务器</summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.TcpServerAsync`1.StartAccept(System.Net.Sockets.SocketAsyncEventArgs)">
+            <summary>Begins an operation to accept a connection request from the client </summary>
+            <param name="acceptEventArg">The context object to use when issuing the accept operation on the server's listening socket</param>
+        </member>
+        <member name="M:CC.Web.Sockets.Async.TcpServerAsync`1.ProcessAccept(System.Net.Sockets.Socket,`0)">
+            <summary>处理接收链接</summary>
+            <param name="socket"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:CC.Web.Sockets.TcpClient">
+            <summary>tcpsocket客户端</summary>
+        </member>
+        <member name="T:CC.Web.Sockets.TcpSocket">
+            <summary>socket发送，接收数据类</summary>
+        </member>
+        <member name="F:CC.Web.Sockets.TcpSocket.m_tcp_socket">
+            <summary>Socket对象</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpSocket.#ctor">
+            <summary>创建一个新的socket</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpSocket.#ctor(System.Net.Sockets.Socket)">
+            <summary>构造函数</summary>
+            <param name="socket">socket对象</param>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpSocket.SetTimeout(System.Int32)">
+            <summary>设置接收和发送等待时间</summary>
+            <param name="timeout">接收和发送等待时间</param>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpSocket.Send(System.Byte[],System.Int32,System.Int32)">
+            <summary>使用指定的 System.Net.Sockets.SocketFlags，将指定字节数的数据发送到已连接的 System.Net.Sockets.Socket（从指定的偏移量开始）。</summary>
+            <param name="buffer">System.Byte 类型的数组，它包含要发送的数据。</param>
+            <param name="offset">数据缓冲区中开始发送数据的位置。</param>
+            <param name="size">要发送的字节数。</param>
+            <returns>已发送到 System.Net.Sockets.Socket 的字节数。</returns>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpSocket.Receive(System.Byte[],System.Int32,System.Int32)">
+            <summary>使用指定的 System.Net.Sockets.SocketFlags，从绑定的 System.Net.Sockets.Socket 接收指定的字节数，存入接收缓冲区的指定偏移量位置。</summary>
+            <param name="buffer">System.Byte 类型的数组，它是存储接收到的数据的位置。</param>
+            <param name="offset">buffer 中存储所接收数据的位置。</param>
+            <param name="size">要接收的字节数。</param>
+            <returns>接收到的字节数。</returns>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpSocket.SendPackage(CC.Utility.Package.PackageDataInfo)">
+            <summary>发送包</summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpSocket.RecvPackage">
+            <summary>接收包</summary>
+            <returns></returns>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpSocket.Close">
+            <summary>关闭连接</summary>
+        </member>
+        <member name="P:CC.Web.Sockets.TcpSocket.Tcp_socket">
+            <summary>Socket对象</summary>
+        </member>
+        <member name="P:CC.Web.Sockets.TcpSocket.RemoteEndPoint">
+            <summary>获取远程终结点</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpClient.Connect(System.String,System.Int32)">
+            <summary>建立与远程主机的连接。</summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+        </member>
+        <member name="T:CC.Web.Sockets.TcpServer">
+            <summary>tcp socket服务器端</summary>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpServer.Bind(System.String,System.Int32)">
+            <summary>使 System.Net.Sockets.Socket 与一个本地终结点相关联</summary>
+            <param name="ip"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpServer.Listen(System.Int32)">
+            <summary>将 System.Net.Sockets.Socket 置于侦听状态。</summary>
+            <param name="backlog">挂起连接队列的最大长度。</param>
+        </member>
+        <member name="M:CC.Web.Sockets.TcpServer.Accept">
+            <summary>为新建连接创建新的SocketHelper</summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
